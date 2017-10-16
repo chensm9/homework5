@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>简易计算器</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src = "calc.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <h1>简易计算器</h1>
+    <div id = "calculator">
+      <div id = "error"></div>
+      <div id = "output_field"></div>
+      <button onclick="Append('7')">7</button>
+      <button onclick="Append('8')">8</button>
+      <button onclick="Append('9')">9</button>
+      <button onclick="Append('/')">/</button>
+      <button onclick="Append('4')">4</button>
+      <button onclick="Append('5')">5</button>
+      <button onclick="Append('6')">6</button>
+      <button onclick="Append('*')">*</button>
+      <button onclick="Append('1')">1</button>
+      <button onclick="Append('2')">2</button>
+      <button onclick="Append('3')">3</button>
+      <button onclick="Append('-')">-</button>
+      <button onclick="Append('0')">0</button>
+      <button onclick="Append('.')">.</button>
+      <button onclick="Delete()">←</button>
+      <button onclick="Append('+')">+</button>
+      <button onclick="Append('(')">(</button>
+      <button onclick="Append(')')">)</button>
+      <button onclick="Clear()">CE</button>
+      <button onclick="Equal()">=</button>
+    </div>
+  </body>
+</html>
