@@ -1,6 +1,5 @@
-
 function showError(message) {
-	document.getElementById('error').textContent = message;
+  document.getElementById('error').textContent = message;
 }
 
 function Append(data) {
@@ -31,13 +30,32 @@ function Equal() {
 		eval("result = " + message);
 	}
 	catch (error) {
-		showError(message + " 不是合法算式");
+		showError(message + " 不是合法算式!!");
 		return;
 	}
 	
-	if(result == undefined || result == NaN || result == Infinity){
-		showError(message + " 不是合法算式");
-	}
+	if(result == undefined || result == NaN || result == Infinity)
+		showError(message + " 不是合法算式!!");
 	else 
-		document.getElementById('output_field').textContent = result;
+    document.getElementById('output_field').textContent = result;
+}
+
+window.onload = function() {
+	var buttons = document.getElementsByTagName("button");
+  for(var i in buttons) {
+    buttons[i].onclick = function() {
+      if(this.className == "print") {
+        Append(this.childNodes[0].textContent);
+      }
+      else if(this.className == "clear") {
+        Clear();
+      }
+      else if(this.className == "delete") {
+        Delete();
+      }
+      else if(this.className == "equal") {
+        Equal();
+      }
+    }
+  }
 }
