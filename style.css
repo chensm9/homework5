@@ -13,9 +13,6 @@ div#calculator {
 	height: 500px;
 	margin-left: 30%;
 	margin-right: 30%;
-	padding-left: 0.8%;
-	padding-right: 0.8%;
-	border-radius: 5%;
 }
 
 div#error {
@@ -28,7 +25,7 @@ div#error {
 
 div#input_field {
 	height: 5%;
-	margin: 5px 10px 10px 10px;
+	margin-right: 5%;
 	padding-bottom: 1%;
 	font-size: 18pt;
 	color: lightblue;
@@ -37,8 +34,7 @@ div#input_field {
 
 div#output_field {
 	height: 10%;
-	margin: 5px 10px 10px 10px;
-	padding-bottom: 1%;
+	margin-right: 5%;
 	/*border: 3px solid black;*/
 	font-size: 30pt;
 	color: lightblue;
@@ -47,7 +43,7 @@ div#output_field {
 
 button {
 	display: inline-block;
-	width: 22%;
+	width: 21%;
 	height: 11%;
 	font-size: 25pt;
 	color: #FFFFFF;

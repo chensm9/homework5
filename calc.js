@@ -2,7 +2,6 @@ function showError(message) {
 	if(message != "") {
 		document.getElementById('output_field').textContent = "0";
 		document.getElementById('input_field').textContent = "";
-
 	}
   document.getElementById('error').textContent = message;
 }
@@ -16,30 +15,32 @@ function Append(data) {
 	}
 
 	var message = document.getElementById('output_field').textContent;
-	if(message == "0"&&data != "."&&data != "*"&&data != "+"&&data != "/"&&data != "-")
+	if(message == "0"&&data != "."&&data != "*"&&data != "+"&&data != "/"&&data != "-"){
 		document.getElementById('output_field').textContent = data;
+	}
 	else if(message != ""&&data == "."&&isNaN(parseInt(message[message.length-1]))){
 		document.getElementById('output_field').textContent += "0.";
 	}
-	else 
+	else
 		document.getElementById('output_field').textContent += data;
 }
 
 function Delete() {
 	showError("");
 	var message = document.getElementById('output_field').textContent;
-	if(message == "0") 
+	if(message == "0")
 		return;
 	else if(message.substring(0, message.length - 1) == "") {
 		document.getElementById('output_field').textContent = "0";
 		return;
 	}
-	document.getElementById('output_field').textContent = 
+	document.getElementById('output_field').textContent =
 		message.substring(0, message.length - 1);
 }
 
 function Clear() {
 	showError("");
+	document.getElementById('input_field').textContent = "";
 	document.getElementById('output_field').textContent = "0";
 }
 
@@ -66,8 +67,8 @@ function Equal() {
 		showError(message + " 不是合法算式!!");
 		return;
 	}
-	
-	if(result == undefined || isNaN(result) || result == Infinity) {
+
+	if(isNaN(parseInt(result))) {
 		showError(message + " 不是合法算式!!");
 	}
 	else {
