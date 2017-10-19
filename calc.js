@@ -72,6 +72,10 @@ function Equal() {
 		showError(message + " 不是合法算式!!");
 	}
 	else {
+		result = result.toFixed(15).toString();
+		while(result.length != 1&& result[result.length-1] == "0"){
+			result = result.substring(0, result.length-1);
+		}
     document.getElementById('output_field').textContent = result;
 	}
 }
