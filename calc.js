@@ -76,6 +76,7 @@ function Equal() {
 		while(result.length != 1&& (result[result.length-1] == "0"||result[result.length-1] == ".")){
 			result = result.substring(0, result.length-1);
 		}
+		if(result == "-") result = "0";
     document.getElementById('output_field').textContent = result;
 	}
 }
